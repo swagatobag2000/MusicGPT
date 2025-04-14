@@ -1,0 +1,11 @@
+soundfile
+torch==1.13.1
+torchaudio==0.13.1
+transformers==4.39.3
+streamlit==1.32.2
+openai==0.27.0
+basic-pitch==0.4.0
+music21==7.3.3
+spleeter==2.3.2
+demucs==4.0.1
+pyannote.audio==2.1.1

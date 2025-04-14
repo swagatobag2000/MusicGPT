@@ -1,0 +1,51 @@
+1. Save it to a file named musicgpt-env.yml.
+2. In your terminal (or Anaconda Prompt): run
+conda env create -f musicgpt-env.yml
+3. Once created: run
+conda activate musicgpt
+
+4. Folder Structure
+
+MusicGPT/
+│
+├── app/
+│   ├── __init__.py
+│   ├── main.py               # Streamlit or CLI entry point
+│   ├── config.py             # Paths, constants
+│   └── utils/
+│       ├── __init__.py
+│       ├── file_handler.py   # Uploads, format conversion
+│       ├── audio_tools.py    # Splitting, separation
+│       ├── analysis.py       # Chords, notes, raga
+│       └── explanation.py    # LLM prompting & result
+│
+├── models/
+│   ├── chord_model.pkl
+│   └── raga_classifier.pkl   # (optional pretrained models)
+│
+├── notebooks/
+│   └── dev_experiments.ipynb
+│
+├── data/
+│   ├── inputs/
+│   └── outputs/
+│
+├── requirements.txt
+├── musicgpt-env.yml
+└── README.md
+5. Commands
+mkdir app app\utils models notebooks data data\inputs data\outputs && (
+echo.> app\__init__.py
+echo.> app\main.py
+echo.> app\config.py
+echo.> app\utils\__init__.py
+echo.> app\utils\file_handler.py
+echo.> app\utils\audio_tools.py
+echo.> app\utils\analysis.py
+echo.> app\utils\explanation.py
+echo.> models\chord_model.pkl
+echo.> notebooks\dev_experiments.ipynb
+echo.> requirements.txt
+echo.> musicgpt-env.yml
+echo.> README.md
+)
